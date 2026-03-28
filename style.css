@@ -15,7 +15,7 @@ color:white;
 .header{
 position:fixed;
 width:100%;
-background:#020617;
+/* background:#757b96; */
 z-index:1000;
 }
 
@@ -117,16 +117,535 @@ margin-top:30px;
 }
 
 .skill-card{
-background:#020617;
+background:#000000;
 padding:30px;
 border-radius:10px;
 transition:.4s;
 }
 
+.hero-buttons {
+display: flex;
+gap: 15px;
+margin-top: 20px;
+}
+
+.btn {
+padding: 12px 25px;
+background: #007bff;
+color: white;
+text-decoration: none;
+border-radius: 5px;
+transition: 0.3s;
+}
+
+.btn:hover {
+background: #010102;
+}
+
+.cv-btn {
+background: #c0eecb;
+}
+
+.cv-btn:hover {
+background: #1e7e34;
+}
 .skill-card:hover{
 transform:translateY(-10px);
 }
+.typewriter{
+color:#00f7ff;
+border-right:3px solid #00f7ff;
+padding-right:5px;
+animation: blink 0.7s infinite;
+font-weight:600;
+}
 
+@keyframes blink{
+0%{border-color:transparent}
+50%{border-color:#00f7ff}
+100%{border-color:transparent}
+}
+.hero-title{
+position:relative;
+display:inline-block;
+}
+
+.hero-title::after{
+content:"";
+position:absolute;
+width:0%;
+height:3px;
+background:linear-gradient(90deg,#00f7ff,#0072ff);
+bottom:-5px;
+left:0;
+transition:0.5s;
+}
+
+.hero-title:hover::after{
+width:100%;
+}
+
+/* ===== Animated Background ===== */
+
+body{
+font-family: 'Poppins', sans-serif;
+background: linear-gradient(270deg,#0f2027,#203a43,#2c5364);
+background-size: 600% 600%;
+animation: gradientBG 15s ease infinite;
+color: white;
+}
+
+@keyframes gradientBG{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+/* Floating Animation */
+
+.background-animation span{
+position:absolute;
+display:block;
+width:20px;
+height:20px;
+background:rgba(255,255,255,0.1);
+animation: animate 25s linear infinite;
+bottom:-150px;
+}
+
+.background-animation span:nth-child(1){
+left:25%;
+width:80px;
+height:80px;
+animation-delay:0s;
+}
+
+.background-animation span:nth-child(2){
+left:10%;
+width:20px;
+height:20px;
+animation-delay:2s;
+animation-duration:12s;
+}
+
+.background-animation span:nth-child(3){
+left:70%;
+width:20px;
+height:20px;
+animation-delay:4s;
+}
+
+.background-animation span:nth-child(4){
+left:40%;
+width:60px;
+height:60px;
+animation-delay:0s;
+animation-duration:18s;
+}
+
+.background-animation span:nth-child(5){
+left:65%;
+width:20px;
+height:20px;
+animation-delay:0s;
+}
+
+@keyframes animate{
+
+0%{
+transform: translateY(0) rotate(0deg);
+opacity:1;
+border-radius:0;
+}
+
+100%{
+transform: translateY(-1000px) rotate(720deg);
+opacity:0;
+border-radius:50%;
+}
+
+}
+.hero,
+.about,
+.skills,
+.projects,
+.contact{
+
+background: rgba(255,255,255,0.05);
+backdrop-filter: blur(10px);
+border-radius: 10px;
+margin: 20px;
+padding: 40px;
+
+}
+/* Cursor */
+
+.cursor{
+width:20px;
+height:20px;
+border:2px solid #00f7ff;
+border-radius:50%;
+position:fixed;
+pointer-events:none;
+transform:translate(-50%,-50%);
+transition:0.1s;
+z-index:999;
+}
+
+.cursor2{
+width:8px;
+height:8px;
+background:#00f7ff;
+border-radius:50%;
+position:fixed;
+pointer-events:none;
+transform:translate(-50%,-50%);
+z-index:999;
+}
+#particles-js{
+position:fixed;
+width:100%;
+height:100%;
+top:0;
+left:0;
+z-index:-1;
+}
+.theme-toggle{
+cursor:pointer;
+font-size:20px;
+color:white;
+}
+
+.light-mode{
+background:white;
+color:black;
+}
+/* Loader */
+
+#loader{
+position:fixed;
+width:100%;
+height:100vh;
+background:#0f2027;
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:9999;
+}
+
+.spinner{
+width:50px;
+height:50px;
+border:5px solid #fff;
+border-top:5px solid #00f7ff;
+border-radius:50%;
+animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+0%{transform:rotate(0deg);}
+100%{transform:rotate(360deg);}
+}
+
+.btn{
+position:relative;
+overflow:hidden;
+}
+
+.btn::before{
+content:"";
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(255,255,255,0.2);
+left:-100%;
+top:0;
+transition:0.5s;
+}
+
+.btn:hover::before{
+left:100%;
+}
+/* Skills Animation */
+
+.skills-container{
+display:grid;
+grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+gap:25px;
+margin-top:40px;
+}
+
+.skill-card{
+background: rgba(255,255,255,0.05);
+backdrop-filter: blur(10px);
+padding:30px;
+border-radius:15px;
+text-align:center;
+transition:0.4s ease;
+cursor:pointer;
+position:relative;
+overflow:hidden;
+}
+
+/* Hover Animation */
+
+.skill-card:hover{
+transform: translateY(-15px) scale(1.05);
+box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+/* Icon Animation */
+
+.skill-card i{
+font-size:40px;
+margin-bottom:15px;
+transition:0.4s;
+}
+
+.skill-card:hover i{
+transform: rotate(10deg) scale(1.2);
+color:#00f7ff;
+}
+
+/* Glow Effect */
+
+.skill-card::before{
+content:"";
+position:absolute;
+width:100%;
+height:100%;
+top:0;
+left:-100%;
+background:linear-gradient(
+120deg,
+transparent,
+rgba(255,255,255,0.2),
+transparent
+);
+transition:0.5s;
+}
+
+.skill-card:hover::before{
+left:100%;
+}
+
+/* Text Animation */
+
+.skill-card h3{
+transition:0.3s;
+}
+
+.skill-card:hover h3{
+letter-spacing:1px;
+}
+/* Projects Animation */
+
+.projects-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+margin-top:40px;
+}
+
+.project-card{
+position:relative;
+background: rgba(255,255,255,0.05);
+backdrop-filter: blur(10px);
+padding:40px;
+border-radius:15px;
+overflow:hidden;
+transition:0.5s;
+cursor:pointer;
+}
+
+/* Hover Lift */
+
+.project-card:hover{
+transform:translateY(-15px) scale(1.03);
+box-shadow:0 20px 40px rgba(0,0,0,0.5);
+}
+
+/* Gradient Border Animation */
+
+.project-card::before{
+content:"";
+position:absolute;
+top:0;
+left:-100%;
+width:100%;
+height:100%;
+background:linear-gradient(
+120deg,
+transparent,
+rgba(0,247,255,0.3),
+transparent
+);
+transition:0.6s;
+}
+
+.project-card:hover::before{
+left:100%;
+}
+
+/* Text Animation */
+
+.project-content h3{
+margin-bottom:10px;
+transition:0.3s;
+}
+
+.project-card:hover h3{
+color:#00f7ff;
+}
+
+/* Button */
+
+.project-btn{
+display:inline-block;
+margin-top:15px;
+padding:8px 20px;
+border:1px solid #00f7ff;
+border-radius:20px;
+text-decoration:none;
+color:white;
+transition:0.3s;
+}
+
+.project-btn:hover{
+background:#00f7ff;
+color:black;
+}
+/* Profile Image Animation */
+
+.photo{
+position:relative;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.photo img{
+width:300px;
+animation: float 4s ease-in-out infinite;
+transition:0.4s;
+z-index:1;
+}
+
+/* Floating Animation */
+
+@keyframes float{
+
+0%{
+transform: translateY(0px);
+}
+
+50%{
+transform: translateY(-20px);
+}
+
+100%{
+transform: translateY(0px);
+}
+
+}
+
+/* Hover Zoom */
+
+.photo img:hover{
+transform: scale(1.05);
+}
+
+/* Glow Effect */
+
+.photo::before{
+content:"";
+position:absolute;
+width:320px;
+height:320px;
+background:linear-gradient(45deg,#799293,#5ad4e2,#00f7ff);
+border-radius:50%;
+animation: rotate 6s linear infinite;
+z-index:0;
+filter: blur(25px);
+}
+/* Hero Title Animation */
+
+.hero-title{
+font-size:48px;
+font-weight:600;
+animation: slideIn 1.5s ease;
+}
+
+/* Slide Animation */
+
+@keyframes slideIn{
+0%{
+opacity:0;
+transform:translateY(50px);
+}
+
+100%{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* Gradient Name Animation */
+
+.name{
+background: linear-gradient(45deg,#00f7ff,#0072ff,#00f7ff);
+background-size: 200% 200%;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+animation: gradientMove 3s ease infinite;
+}
+
+/* Gradient Move */
+
+@keyframes gradientMove{
+
+0%{
+background-position:0% 50%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+100%{
+background-position:0% 50%;
+}
+
+}
+
+/* Hover Effect */
+
+.name:hover{
+text-shadow:0 0 20px #00f7ff;
+transition:0.3s;
+}
+.hero-title span{
+display:inline-block;
+transition:0.3s;
+}
+
+.hero-title span:hover{
+transform: translateY(-5px);
+}
+
+/* Rotate Animation */
+
+@keyframes rotate{
+
+0%{
+transform: rotate(0deg);
+}
+
+100%{
+transform: rotate(360deg);
+}
+
+}
 /* Projects */
 
 .projects{
