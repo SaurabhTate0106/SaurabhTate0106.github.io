@@ -290,6 +290,53 @@ background:#333;
 transform:translateY(-5px);
 }
 
+.contact-container{
+display:flex;
+justify-content:center;
+gap:35px;
+flex-wrap:wrap;
+margin-top:30px;
+}
+
+.contact-icon{
+display:flex;
+flex-direction:column;
+align-items:center;
+text-decoration:none;
+color:white;
+font-size:16px;
+transition:0.3s;
+}
+
+.contact-icon i{
+font-size:28px;
+padding:18px;
+border-radius:50%;
+margin-bottom:8px;
+transition:0.3s;
+}
+
+/* Colors */
+
+.whatsapp i{ background:#25D366; }
+.linkedin i{ background:#0077b5; }
+.github i{ background:#333; }
+.gmail i{ background:#EA4335; }
+.call i{ background:#0ea5e9; }
+
+
+.contact-icon:hover{
+transform:translateY(-8px);
+}
+
+/* Map */
+
+.map-container{
+margin-top:50px;
+border-radius:10px;
+overflow:hidden;
+}
+
 /* ===== Animated Background ===== */
 
 body{
