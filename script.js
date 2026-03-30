@@ -90,6 +90,8 @@ glare: true,
 "max-glare": 0.2,
 });
 
+
+
 /* Typing Animation */
 
 const text = ["Full Stack Developer","Java Developer","Spring Boot Developer"];
